@@ -1,0 +1,204 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgray;
+  margin: 0;
+  }
+
+.wrapper{
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:  "cabecalho"
+                        "curriculo"
+                       "conteudo"
+                        "rodape";
+  grid-gap: 10px;
+}
+
+header {
+  grid-area: cabecalho;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+  color: black;
+  
+  background-image: url("img/trabalhando.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+  header > .box > h1 {
+    font-size: xxx-large;
+    text-shadow: 2px 2px white;
+    
+  }
+  header > .box {
+  background-color: lightgrey;
+  opacity: 0.8;
+  }
+
+header > img {
+  object-fit: cover; 
+}
+
+aside {
+  margin: 10px 0px;
+  grid-area: curriculo;
+  display: block;
+  background-color: whitesmoke
+}
+
+#contato, #formacao, #bio {
+  padding: 10px; 
+  margin: 10px; 
+  border-bottom: solid 2px black;
+}
+
+#bio {
+  text-align: left;
+}
+
+#experiencia {
+ padding: 10px; 
+  margin: 10px;  
+}
+
+aside p > strong{
+ color: darkslategray;
+}
+
+#fotoPerfil{
+  margin: 10px 50px;
+  }
+
+#fotoPerfil > img {
+  border-radius: 50%;
+  max-width: 100%;
+}
+
+section {
+  grid-area: conteudo;
+}
+
+.destaque {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  }
+
+.noticias {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas: "noticia noticia";
+  grid-gap: 10px;
+  margin: 10px;  
+}
+
+.noticia {
+  background-color: whitesmoke;
+  padding: 15px;
+  }
+
+  .noticia img{
+    width: 450px;
+    height: 300px;
+  }
+
+.noticia:hover {
+  opacity: 0.5;
+  }
+
+#manchete {
+  grid-area: manchete;
+  background-color: whitesmoke;
+  padding: 20px;
+  margin: 10px;
+  }
+
+#manchete:hover {
+  opacity: 0.5;
+}
+
+#manchete > div {
+  display: flex;
+}
+
+#manchete > div > img{
+  max-width: 100%;
+}
+
+#manchete > h1 {
+  font-size: xx-large;
+  text-shadow: 2px 2px lightgrey;
+}
+
+#manchete > p {
+  font-size: larger;
+  font-style: italic;
+}
+
+h2 {
+  text-shadow: 1px 1px lightgrey;
+}
+
+footer {
+  grid-area: rodape;
+}
+
+@media (min-width: 600px) {
+  .wrapper{
+  display: grid;
+  grid-template-columns:  300px 1fr;
+  grid-template-rows: 574px 1fr 120px;
+  grid-template-areas:  "cabecalho cabecalho"
+                        "curriculo conteudo"
+                        "rodape rodape";
+  grid-gap: 10px;
+}
+}
+
+@media (max-device-width: 600px) {
+  body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+  #fotoManchete {
+    width: 100%;
+}
+header {
+  width: 100%;
+}
+ header > p {
+    width: 50%;
+    margin: 0px;
+    font-weight: bold;
+    text-align: left;
+   text-shadow: 3px 3px black;
+  }
+
+#manchete > div {
+  display: inline-block;
+}
+  #fotoPerfil {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  } 
+.noticias {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "noticia";
+  grid-gap: 10px;
+  margin: 10px;  
+}
+.noticia > img {
+  width: 100%;
+}
+
+}
+
